@@ -8,6 +8,8 @@ from alien import Aliens
 from config import *
 from decor import Ground, Barricades
 from spaceship import Spaceship
+from ui import Score, LifeCounter, HighScore, GameOver
+
 
 class PySpaceInvaders:
 
@@ -30,6 +32,10 @@ class PySpaceInvaders:
         self.aliens = Aliens()
         self.ground = Ground()
         self.barricades = Barricades()
+        self.score = Score()
+        self.high_score = HighScore()
+        self.life_counter = LifeCounter()
+        self.game_over = GameOver()
 
     def play(self):
         clock = pygame.time.Clock()
@@ -311,6 +317,8 @@ class PySpaceInvaders:
         self.spaceship = Spaceship()
         self.aliens.reset()
         self.barricades = Barricades()
+        self.score = Score()
+        self.life_counter = LifeCounter()
 
         self.is_game_over = False
         self.delay_since_game_over = 0
