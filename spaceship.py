@@ -4,6 +4,8 @@ from config import *
 from tools import MovingDirection
 
 
+
+
 class Missile:
     def __init__(self):
         self.rect = None
